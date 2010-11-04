@@ -1,0 +1,13 @@
+HTTPServerMain:
+--------------
+
+./HTTPServerMain <port> to start the HTTP server on the specified port. If port argument isn't given, the server runs on port 80 by default.
+
+HTTPClientMain:
+---------------
+
+./HTTPClientMain <method> <url> <localFileName> <direct/proxyaddress>
+
+method can be GET or PUT
+url is in the form http://server:port/remotepath
+if a proxy is not needed, enter "direct", else enter the proxyserver url
