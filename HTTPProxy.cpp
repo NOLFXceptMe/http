@@ -528,9 +528,10 @@ string HTTPProxy::getIp(const string& svrName)
 		return "";
 	}
 	struct in_addr *addr_list = (struct in_addr *)buf;
+	string ip_address = inet_ntoa(addr_list[0]);
 
 	delete buf;
-	return inet_ntoa(addr_list[0]);
+	return ip_address;
 }
 
 int HTTPProxy::prepareErrorResponse(size_t statusCode)
