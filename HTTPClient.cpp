@@ -21,6 +21,7 @@ Close connection
 
 #include<errno.h>
 #include<fcntl.h>
+#include<unistd.h>
 #include<arpa/inet.h>
 #include<sys/socket.h>
 
