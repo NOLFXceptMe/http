@@ -1,7 +1,0 @@
-Horribly unusable by anyone except me, for now.
-
-Workplan:
----------
-0) Make usability more "standard"
-1) Implement POST on client and server
-2) Implement other HTTP methods.
