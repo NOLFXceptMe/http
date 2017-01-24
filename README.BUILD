@@ -1,7 +1,7 @@
 To compile
 
 0) Create a build/ folder
-1) Run 
+1) Run
 
 cmake ..
 

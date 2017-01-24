@@ -1,5 +1,20 @@
-Was developed for an assignment as a part of Computer Networks course (Autumn 2009).
+Was developed for an assignment as a part of Computer Networks course (IIT Kharagpur Computer Science Autumn 2009).
 
+NOTE:
+0) Both HTTPClientMain and HTTPProxyMain depend on running the DNSServer
+1) URL for HTTPClientMain must end with /
+
+DNSServer:
+----------
+./DNSServer <ip1> <ip2> ..
+
+ip1, ip2 are DNS Servers that our secondary (tertiary?) server can depend on. This could also simply be localhost if your Linux distribution runs dnsmasq.
+
+e.g.
+
+./DNSServer 8.8.4.4 4.2.2.2
+./DNSServer localhost
+./DNSServer 8.8.4.4
 
 HTTPServerMain:
 --------------
@@ -14,3 +29,16 @@ HTTPClientMain:
 method can be GET or PUT
 url is in the form http://server:port/remotepath
 if a proxy is not needed, enter "direct", else enter the proxyserver url
+
+./HTTPClientMain GET http://xkcd.com/ latestcomic.html direct
+./HTTPClientMain GET http://xkcd.com/ latestcomic.html 127.0.0.1:10000
+
+
+HTTPProxyMain:
+--------------
+
+./HTTPProxyMain <port>
+
+If port is not provided, the proxy runs on default port 8080
+
+./HTTPProxyMain 10000
