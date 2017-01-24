@@ -3,34 +3,6 @@ project(http)
 
 set(CMAKE_CXX_STANDARD 11)
 
-set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "bin/")
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/bin/")
 
-set(DNS_SRC
-        DNSServer.c)
-
-set(HTTP_LIB_SRC
-        HTTP.h
-        HTTPRequest.h
-        HTTPRequest.cpp
-        HTTPResponse.h
-        HTTPResponse.cpp)
-
-set(HTTP_CLIENT_SRC
-        HTTPClient.h
-        HTTPClient.cpp
-        HTTPClientMain.cpp)
-
-set(HTTP_SERVER_SRC
-        HTTPServer.h
-        HTTPServer.cpp
-        HTTPServerMain.cpp)
-
-set(HTTP_PROXY_SRC
-        HTTPProxy.cpp
-        HTTPProxy.h
-        HTTPProxyMain.cpp)
-
-add_executable(DNSServer ${DNS_SRC})
-add_executable(HTTPClientMain ${HTTP_LIB_SRC} ${HTTP_CLIENT_SRC})
-add_executable(HTTPServerMain ${HTTP_LIB_SRC} ${HTTP_SERVER_SRC})
-add_executable(HTTPProxyMain ${HTTP_LIB_SRC} ${HTTP_PROXY_SRC})
+add_subdirectory(src)
