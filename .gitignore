@@ -1,0 +1,10 @@
+.idea/
+bin/
+cmake-build-debug/
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+*.cbp
+*.o
+*.swp
