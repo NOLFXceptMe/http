@@ -47,7 +47,7 @@ class HTTPProxy{
 		int prepareErrorResponse(size_t );
 
 		/* For the Client */
-		size_t proxyPort;
+		size_t proxyPort = 8080;
 		int sockfd_cli, newsockfd_cli;		/* Used for client */
 		struct sockaddr_in proxyAddr, cliAddr;
 		socklen_t cliLen;
